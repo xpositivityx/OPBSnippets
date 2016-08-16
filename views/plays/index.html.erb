@@ -1,0 +1,14 @@
+<div class = 'row'>
+	<div class = 'span3 offset3' id='sidebar'>
+	<br/>
+	<%= form_tag plays_display_path, remote: true do %>
+	<%= collection_select(:play, :catagorie_id, Catagorie.all, :id, :name)%>
+	<%= submit_tag "find" %>
+	<% end %>
+	</div>
+	<div class = 'span4 playlist'>
+	</div>
+	<div class = 'span4 playinfo'>
+	</div>
+</div>
+

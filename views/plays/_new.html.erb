@@ -1,0 +1,16 @@
+<h3>Add a Play</h3>
+
+<%= form_for @play do |f| %>
+	<%= f.label :name, "Name" %>
+	<%= f.text_field :name %>
+	<%= f.label :catagorie, "Catagory" %>
+  <%=f.collection_select(:catagorie_id, Catagorie.all, :id, :name)%>
+  <%= f.label :image, "Image URL" %>
+  <%= f.text_field :image %>
+  <%= f.label :notes, "Notes" %>
+  <%= f.text_area :notes %><br/>
+  <p class = 'btn'>
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+  </p>
+
+<% end %>

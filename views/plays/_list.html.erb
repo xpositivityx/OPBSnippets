@@ -1,0 +1,8 @@
+<% if plays %>
+	<ul>
+		<% plays.each do |play| %>
+			<li><%=link_to play.name, {:action => :index,
+																	data: play.id}, remote: true%></li>
+		<% end %>
+	</ul>
+<% end %>
